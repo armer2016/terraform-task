@@ -3,12 +3,6 @@ variable "aws_region" {
   default = "us-east-1"
 }
 
-variable "aws_account_ids" {
-  type    = list
-  default = null
+provider "aws" {
+  region              = var.aws_region
 }
-
-terraform {
-  required_version = ">= 0.12.20"
-}
-
